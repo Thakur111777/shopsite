@@ -91,7 +91,7 @@ const SellerDashboard = () => {
                             >
                                 <LocalMallIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-                                SHOPSITE
+                                ETHICAL FASHION
                             </NavLogo>
                         </Typography>
 
