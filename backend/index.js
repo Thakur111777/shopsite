@@ -14,7 +14,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); // Stripe Secret Key f
 // Middleware
 app.use(express.json({ limit: '10mb' }));
 app.use(cors());
-
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -50,7 +49,6 @@ app.post('/create-payment-intent', async (req, res) => {
 
 // Routes
 app.use('/', Routes);
-
 // Start server
 app.listen(PORT, () => {
   console.log(`Server started at port no. ${PORT}`);

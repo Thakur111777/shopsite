@@ -133,7 +133,7 @@ const Navbar = () => {
                                 duration={500}
                                 onClick={homeHandler}
                             >
-                                SHOPSITE
+                                ETHICAL FASHION
                             </NavLogo>
                         </Typography>
                     </HomeContainer>
@@ -214,7 +214,7 @@ const Navbar = () => {
                             >
                                 <LocalMallIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
-                                SHOPSITE
+                            ETHICAL FASHION
                             </NavLogo>
                         </Typography>
                     </HomeContainer>
@@ -224,6 +224,18 @@ const Navbar = () => {
                         <ProductsMenu dropName="Categories" />
                         <ProductsMenu dropName="Products" />
                     </Box>
+                    <Button
+    onClick={() => navigate("/about")}
+    sx={{ my: 2, color: 'white', display: 'block' }}
+>
+    About
+</Button> 
+<Button
+    onClick={() => navigate("/Future")}
+    sx={{ my: 2, color: 'white', display: 'block' }}
+>
+    Future
+</Button>
 
                     {currentRole === null &&
                         <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' }, }}>
@@ -246,6 +258,19 @@ const Navbar = () => {
                                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
                             >
+                                <MenuItem onClick={() => {
+    navigate("/about")
+    handleCloseNavMenu()
+}}>
+    <Typography textAlign="center">About</Typography>
+</MenuItem> 
+<MenuItem onClick={() => {
+    navigate("/Future")
+    handleCloseNavMenu()
+}}>
+    <Typography textAlign="center">Future</Typography>
+</MenuItem>
+
                                 <MenuItem onClick={() => navigate("/Customerlogin")}>
                                     <Avatar />
                                     <Link to="/Customerlogin">
@@ -261,6 +286,7 @@ const Navbar = () => {
                                         Sign in as seller
                                     </Link>
                                 </MenuItem>
+
                             </Menu>
                         </Box>
                     }

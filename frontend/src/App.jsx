@@ -16,7 +16,9 @@ import Logout from './pages/Logout';
 import { isTokenValid } from './redux/userSlice';
 import CheckoutAftermath from './pages/customer/pages/CheckoutAftermath';
 import ViewOrder from './pages/customer/pages/ViewOrder';
-
+import Footer from './pages/Footer';
+import About from './pages/About';
+import Future from './pages/Future';
 const App = () => {
 
   const dispatch = useDispatch()
@@ -81,7 +83,10 @@ const App = () => {
             <Route path="/Orders" element={<CustomerOrders />} />
             <Route path="/order/view/:id" element={<ViewOrder />} />
             <Route path="/Logout" element={<Logout />} />
+            <Route path="/Future" element={<Future />} />
+            <Route path="/About" element={<About />} />
           </Routes>
+          <Footer/>
         </>
       }
 
